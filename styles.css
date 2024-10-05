@@ -1,6 +1,18 @@
 body {
-  background-color: blue;
-  color: white;
+  background-color: darkgreen;
+}
+
+form {
+  background-color: lightgray;
+}
+
+input[type=text] input[type=email],
+textarea {
+  color: navy;
+}
+
+h1 {
+  color: navy;
 }
 
 /*# sourceMappingURL=styles.css.map */
