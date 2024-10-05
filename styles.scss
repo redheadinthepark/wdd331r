@@ -4,13 +4,68 @@ $body-background-color: navy;
 $form-background-color: lightgray;
 $input-color: navy;
 $headlines-color : lightgray;
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+@mixin breakpoint($break) {
+    @if $break == large {
+      @media (max-width: $break-large) { @content; }
+    }
+    @else if $break == medium {
+      @media (max-width: $break-medium) { @content; }
+    }
+    @else if $break == small {
+      @media (max-width: $break-small) { @content; }
+    }
+    @else {
+      @media ($break) { @content; }
+    }
+  }
+  
+@mixin center($width, $max-width: 960px) {
+    width: $width;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
 
 body {
     background-color: $body-background-color;
 }
 
-form {
+#contactform {
     background-color: $form-background-color;
+    @include breakpoint(small) {
+        width: 100%;
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    @include breakpoint(medium) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        label {
+            width: 30%;
+            text-align: right;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        input, textarea {
+            width: 65%;
+        }
+    }
+
+    @include breakpoint(large) {
+        @include center(70%, 900px);
+    }
 
 }
 

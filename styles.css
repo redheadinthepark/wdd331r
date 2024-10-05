@@ -1,9 +1,43 @@
 body {
-  background-color: darkgreen;
+  background-color: navy;
 }
 
-form {
+#contactform {
   background-color: lightgray;
+}
+@media (max-width: 20em) {
+  #contactform {
+    width: 100%;
+  }
+  #contactform label {
+    display: block;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 31em) {
+  #contactform {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #contactform label {
+    width: 30%;
+    text-align: right;
+    margin-right: 20px;
+    display: inline-block;
+  }
+  #contactform input, #contactform textarea {
+    width: 65%;
+  }
+}
+@media (max-width: 60em) {
+  #contactform {
+    width: 70%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 input[type=text] input[type=email],
@@ -12,7 +46,7 @@ textarea {
 }
 
 h1 {
-  color: navy;
+  color: lightgray;
 }
 
 /*# sourceMappingURL=styles.css.map */
