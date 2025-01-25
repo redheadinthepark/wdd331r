@@ -4,4 +4,41 @@
 $body-background-color: navy;
 $form-background-color: lightgray;
 $input-color: navy;
-$headlines-color : lightgray;
+$headlines-color : white;
+
+body {
+    background-color: $body-background-color;
+    color: $headlines-color;
+  }
+  
+  #contactform {
+    background-color: $form-background-color;
+  
+    input, textarea {
+      background-color: $input-color;
+    }
+  }
+  #contactform {
+    background-color: $form-background-color;
+  
+    input, textarea {
+      background-color: $input-color;
+      flex: 2;
+    }
+  
+    @media (min-width: 600px) {
+      & {
+        width: 90%;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+  
+    @media (min-width: 900px) {
+      & {
+        width: 70%;
+        max-width: 900px;
+      }
+    }
+  }
+  

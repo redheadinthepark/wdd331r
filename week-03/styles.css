@@ -1,0 +1,13 @@
+body {
+  background-color: navy;
+  color: brown;
+}
+
+#contactform {
+  background-color: lightgray;
+}
+#contactform input, #contactform textarea {
+  background-color: navy;
+}
+
+/*# sourceMappingURL=styles.css.map */
