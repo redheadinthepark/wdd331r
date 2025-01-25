@@ -1,13 +1,45 @@
 body {
-  background-color: navy;
-  color: brown;
+  background-color: #4a657a;
+  color: #d4a517;
 }
 
 #contactform {
-  background-color: lightgray;
+  background-color: #ecf0f1;
 }
 #contactform input, #contactform textarea {
-  background-color: navy;
+  background-color: #bdc3c7;
+  flex: 2;
+}
+@media (min-width: 600px) {
+  #contactform {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 900px) {
+  #contactform {
+    width: 70%;
+    max-width: 900px;
+  }
+}
+
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+@media (min-width: 600px) {
+  #contactform {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
