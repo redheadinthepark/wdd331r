@@ -1,7 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+
+// Color Variables
+$primary-color: #333;
+$secondary-color: #666;
+$border-color: #d0d0d0;
+$link-hover-color: #00ddff;
+$link-active-color: #deb887;
+
+// Font Variables
+$primary-font: Helvetica, Arial, sans-serif;
+$secondary-font: "Lora", serif;
+
+// Base Styles
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #333;
+  font-family: $primary-font;
+  color: $primary-color;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -10,92 +23,113 @@ body {
 header {
   padding: 20px;
   text-align: center;
-}
-header h1,
-header h2 {
-  font-family: "Lora", serif;
-}
-header h1 {
-  font-size: 4.5rem;
-}
-header h1 a {
-  color: #333;
-  text-decoration: none;
-}
-header h1 a:hover, header h1 a:active, header h1 a:visited {
-  color: #333;
-}
-header h2 {
-  font-size: 1.8rem;
+
+  h1,
+  h2 {
+    font-family: $secondary-font;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:visited {
+        color: $primary-color;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
 }
 
 nav {
   padding: 10px 0;
-  border-top: 1px solid #d0d0d0;
-  border-bottom: 1px solid #d0d0d0;
-}
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-nav li {
-  text-transform: uppercase;
-}
-nav a {
-  font-family: "Lora", serif;
-  color: #666;
-  text-decoration: none;
-  padding: 5px 0;
-}
-nav a:visited {
-  color: #666;
-}
-nav a:hover {
-  color: #00ddff;
-}
-nav a:active {
-  color: #deb887;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    text-transform: uppercase;
+  }
+
+  a {
+    font-family: $secondary-font;
+    color: $secondary-color;
+    text-decoration: none;
+    padding: 5px 0;
+
+    &:visited {
+      color: $secondary-color;
+    }
+
+    &:hover {
+      color: $link-hover-color;
+    }
+
+    &:active {
+      color: $link-active-color;
+    }
+  }
 }
 
 main {
   padding: 20px;
-}
-main article {
-  margin-bottom: 40px;
-}
-main article .post-date {
-  color: #333;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  text-align: right;
-  border-bottom: 1px solid #d0d0d0;
-}
-main article .post-content {
-  padding-top: 10px;
-}
-main article .post-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px 0;
-}
-main article .post-content p {
-  font-size: 1rem;
-}
-main article .post-content a {
-  color: #666;
-  text-decoration: none;
-}
-main article .post-content a:hover {
-  color: #00ddff;
-}
-main article .post-content a:active {
-  color: #deb887;
+
+  article {
+    margin-bottom: 40px;
+
+    .post-date {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      text-align: right;
+      border-bottom: 1px solid $border-color;
+    }
+
+    .post-content {
+      padding-top: 10px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+
+        &:active {
+          color: $link-active-color;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -105,27 +139,30 @@ main article .post-content a:active {
     justify-content: flex-end;
     align-items: center;
     margin-right: 20px;
+
+    li {
+      margin-right: 20px;
+    }
   }
-  nav ul li {
-    margin-right: 20px;
-  }
+
   main {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 20px;
-  }
-  main article {
-    display: contents;
-  }
-  main article .post-date {
-    border-bottom: none;
-  }
-  main article .post-content {
-    padding: 20px;
-    padding-top: 0;
-    border-bottom: 1px solid #d0d0d0;
-    border-left: 1px solid #d0d0d0;
+
+    article {
+      display: contents;
+
+      .post-date {
+        border-bottom: none;
+      }
+
+      .post-content {
+        padding: 20px;
+        padding-top: 0;
+        border-bottom: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+      }
+    }
   }
 }
-
-/*# sourceMappingURL=main.css.map */

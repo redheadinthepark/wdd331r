@@ -11,25 +11,20 @@ header {
   padding: 20px;
   text-align: center;
 }
-
 header h1,
 header h2 {
   font-family: "Lora", serif;
 }
-
 header h1 {
   font-size: 4.5rem;
 }
-
 header h1 a {
   color: #333;
   text-decoration: none;
 }
-
 header h1 a:hover, header h1 a:active, header h1 a:visited {
   color: #333;
 }
-
 header h2 {
   font-size: 1.8rem;
 }
@@ -39,7 +34,6 @@ nav {
   border-top: 1px solid #d0d0d0;
   border-bottom: 1px solid #d0d0d0;
 }
-
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -49,26 +43,21 @@ nav ul {
   justify-content: center;
   align-items: center;
 }
-
 nav li {
   text-transform: uppercase;
 }
-
 nav a {
   font-family: "Lora", serif;
   color: #666;
   text-decoration: none;
   padding: 5px 0;
 }
-
 nav a:visited {
   color: #666;
 }
-
 nav a:hover {
   color: #00ddff;
 }
-
 nav a:active {
   color: #deb887;
 }
@@ -76,11 +65,9 @@ nav a:active {
 main {
   padding: 20px;
 }
-
 main article {
   margin-bottom: 40px;
 }
-
 main article .post-date {
   color: #333;
   text-transform: uppercase;
@@ -88,31 +75,25 @@ main article .post-date {
   text-align: right;
   border-bottom: 1px solid #d0d0d0;
 }
-
 main article .post-content {
   padding-top: 10px;
 }
-
 main article .post-content img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 10px 0;
 }
-
 main article .post-content p {
   font-size: 1rem;
 }
-
 main article .post-content a {
   color: #666;
   text-decoration: none;
 }
-
 main article .post-content a:hover {
   color: #00ddff;
 }
-
 main article .post-content a:active {
   color: #deb887;
 }
@@ -146,6 +127,5 @@ main article .post-content a:active {
     border-left: 1px solid #d0d0d0;
   }
 }
-
 
 /*# sourceMappingURL=main.css.map */
