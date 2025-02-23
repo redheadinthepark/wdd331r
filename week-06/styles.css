@@ -41,25 +41,19 @@ body {
     flex-shrink: 0;
     line-height: 1.1;
     padding: 5px 0;
-
     width: 100%;
     text-align: center;
 }
 
 .col-grid {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-}
-
-.col-grid .card {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 200px;
-    max-width: 200px;
+    max-height: 2000px;
 }
 
 .col-grid .card img {
@@ -94,5 +88,5 @@ body {
     width: auto;
     max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
