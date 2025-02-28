@@ -19,9 +19,8 @@ body {
 @media (max-width: 31em) {
   #contactform {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
   #contactform label {
     width: 30%;
@@ -43,7 +42,7 @@ body {
   }
 }
 
-input[type=text] input[type=email],
+input[type="text"] input[type="email"],
 textarea {
   color: navy;
 }
