@@ -1,0 +1,58 @@
+{
+  "generator": "analyze-css v2.3.1",
+  "metrics": {
+    "base64Length": 0,
+    "redundantBodySelectors": 0,
+    "redundantChildNodesSelectors": 0,
+    "colors": 0,
+    "comments": 0,
+    "commentsLength": 0,
+    "complexSelectors": 1,
+    "duplicatedSelectors": 0,
+    "duplicatedProperties": 0,
+    "emptyRules": 0,
+    "expressions": 0,
+    "oldIEFixes": 0,
+    "imports": 0,
+    "importants": 0,
+    "mediaQueries": 3,
+    "notMinified": 1,
+    "multiClassesSelectors": 0,
+    "parsingErrors": 0,
+    "oldPropertyPrefixes": 0,
+    "propertyResets": 0,
+    "qualifiedSelectors": 4,
+    "specificityIdAvg": 0.67,
+    "specificityIdTotal": 8,
+    "specificityClassAvg": 0.17,
+    "specificityClassTotal": 2,
+    "specificityTagAvg": 0.75,
+    "specificityTagTotal": 9,
+    "selectors": 12,
+    "selectorLengthAvg": 1.4166666666666667,
+    "selectorsByAttribute": 0,
+    "selectorsByClass": 0,
+    "selectorsById": 8,
+    "selectorsByPseudo": 0,
+    "selectorsByTag": 9,
+    "length": 765,
+    "rules": 10,
+    "declarations": 19
+  },
+  "offenders": {
+    "mediaQueries": [
+      "@media (width <= 20em) (2 rules) @ 9:1",
+      "@media (width <= 31em) (3 rules) @ 20:1",
+      "@media (width <= 60em) (1 rules) @ 39:1"
+    ],
+    "qualifiedSelectors": [
+      "#contactform label @ 14:3",
+      "#contactform label @ 27:3",
+      "#contactform input @ 34:3",
+      "#contactform textarea @ 34:3"
+    ],
+    "complexSelectors": [
+      "input[type=\"text\"] input[type=\"email\"] @ 48:1"
+    ]
+  }
+}

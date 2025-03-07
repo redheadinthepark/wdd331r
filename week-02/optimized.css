@@ -1,3 +1,4 @@
+/*** uncss> filename: styles.css ***/
 body {
   background-color: navy;
 }
@@ -45,11 +46,11 @@ body {
   }
 }
 
-input[type="text"], input[type="email"],
-textarea {
+input[type="text"], input[type="email"], textarea {
   color: navy;
 }
 
 h1 {
   color: lightgray;
 }
+
