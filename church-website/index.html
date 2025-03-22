@@ -12,69 +12,203 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-    <div class="site-header__brand">
-      <a href="/" aria-label="Home page">
-        <img src="images/logo.svg" alt="Church of Jesus Christ Logo" class="site-header__logo" />
-      </a>
-    </div>
-
     <button class="site-header__menu-button" aria-label="Open menu">
-      <!-- Hamburger SVG Icon -->
-      <svg viewBox="0 0 100 80" width="24" height="24" aria-hidden="true">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
+      <svg width="24" height="24" viewBox="0 0 100 80" fill="currentColor" aria-hidden="true">
+        <rect width="100" height="10" />
+        <rect y="30" width="100" height="10" />
+        <rect y="60" width="100" height="10" />
       </svg>
     </button>
+
+    <div class="site-header__brand">
+      <span class="site-header__title">
+        THE CHURCH OF<br>
+        <strong>JESUS CHRIST</strong><br>
+        OF LATTER-DAY SAINTS
+      </span>
+    </div>
+
+    <div class="site-header__actions">
+      <span class="site-header__search-icon" aria-label="Search" role="img">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M10 2a8 8 0 105.29 14.29l5.21 5.2 1.5-1.5-5.2-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+        </svg>
+      </span>
+
+      <span class="site-header__sign-in" aria-label="Sign In" role="img">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a5 5 0 100 10 5 5 0 000-10zm0 12c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/>
+        </svg>
+        <span>Sign In</span>
+      </span>
+    </div>
   </header>
 
   <main id="main-content">
     <section class="hero">
-      <h1 class="hero__title">Jesus Christ Is the Strength of Youth</h1>
-      <p class="hero__subtitle">He is your strength. He is your hope. He is your way forward.</p>
-      <img src="images/hero-image.jpg" alt="Youth gathering image" class="hero__img" />
-    </section>
+  <div class="hero__background">
+    <img src="img/hero.webp" alt="Smiling people at General Conference">
+    <div class="hero__overlay">
+      <h1>General Conference: Feel the Savior’s Greater Love</h1>
+      <p>Join us April 5–6</p>
+      <a href="#" class="hero__button" aria-label="Learn more about General Conference">Learn more</a>
+    </div>
+  </div>
 
-    <section class="newsroom">
-      <h2 class="newsroom__title">Church News</h2>
-      <div class="newsroom__articles">
-        <article class="card">
-          <img src="images/news1.jpg" alt="News article 1" class="card__img" />
-          <h3 class="card__title">Prophet Encourages Youth</h3>
-          <p class="card__summary">President Nelson speaks on courage and faith in today's world.</p>
-        </article>
-        <article class="card">
-          <img src="images/news2.jpg" alt="News article 2" class="card__img" />
-          <h3 class="card__title">Worldwide Devotional</h3>
-          <p class="card__summary">Messages of hope shared across the globe in recent event.</p>
-        </article>
+  <div class="hero__banner">
+    <div class="hero__banner-image">
+      <img src="img/christ.webp" alt="Jesus Christ appearing to Mary after resurrection">
+    </div>
+    <div class="hero__banner-content">
+      <p>Feel love through the power of His Resurrection</p>
+      <strong>Celebrate Jesus Christ’s Greater Love this Easter</strong>
+    </div>
+    <a href="#" class="hero__button hero__button--small" aria-label="Learn more about Easter">Learn more</a>
+  </div>
+</section>
+
+    <section class="believe">
+  <div class="believe__heading">
+    <h2>What We Believe</h2>
+    <p>Learn about The Church of Jesus Christ of Latter-day Saints</p>
+    <span class="believe__arrow" aria-hidden="true">&#9654;</span>
+  </div>
+  <div class="believe__cards">
+    <article class="believe__card">
+      <img src="img/learn.webp" alt="Painting of Jesus Christ">
+      <h3>Learn About Jesus Christ</h3>
+      <p>Get to know and follow Him</p>
+    </article>
+    <article class="believe__card">
+      <img src="img/find.webp" alt="Mother and child hugging and smiling">
+      <h3>Find Meaning in Your Life</h3>
+      <p>Seek God’s perspective</p>
+    </article>
+    <article class="believe__card">
+      <img src="img/navigate.webp" alt="Woman sitting on steps praying">
+      <h3>Navigate Life’s Challenges</h3>
+      <p>Discover strength, direction, and peace</p>
+    </article>
+  </div>
+</section>
+
+    <section class="welcome">
+      <div class="section-card__text">
+        <h2>All are welcome. Visit a church near you.</h2>
+        <p>We’re a Christ-focused community, doing our best to love and serve others. There’s a place for you here.</p>
+        <p><strong>Find a church near you.</strong></p>
+        <div class="section-card__form">
+          <input type="text" placeholder="Enter full address" aria-label="Enter full address">
+          <button aria-label="Find a church">Find</button>
+        </div>
+      </div>
+      <div class="section-card__image">
+        <img src="img/all_are_welcome.webp" alt="People smiling at church">
       </div>
     </section>
 
-    <section class="interest-boxes">
-      <h2 class="interest-boxes__title">Explore the Gospel</h2>
-      <div class="interest-boxes__grid">
-        <div class="interest-box">
-          <img src="images/scriptures.jpg" alt="Scriptures" class="interest-box__img" />
-          <h3 class="interest-box__title">Scriptures</h3>
-          <a href="#" class="interest-box__link">Read Now</a>
-        </div>
-        <div class="interest-box">
-          <img src="images/temples.jpg" alt="Temples" class="interest-box__img" />
-          <h3 class="interest-box__title">Temples</h3>
-          <a href="#" class="interest-box__link">Find a Temple</a>
-        </div>
-      </div>
-    </section>
+    <section class="questions">
+  <h2>Common Questions</h2>
+  <ul class="questions__list">
+    <li>
+      <span>Are members of The Church of Jesus Christ of Latter-day Saints Christian?</span>
+    </li>
+    <li>
+      <span>What are Church services like?</span>
+    </li>
+    <li>
+      <span>Why does The Church of Jesus Christ of Latter-day Saints have temples?</span>
+    </li>
+    <li>
+      <span>What is the Book of Mormon?</span>
+    </li>
+    <li>
+      <span>Do we believe in the Bible?</span>
+    </li>
+  </ul>
+  <a href="#" class="questions__button" aria-label="View more questions">View More</a>
+</section>
 
-    <section class="language-selector">
-      <h2 class="language-selector__title">Choose Your Language</h2>
-      <button class="language-selector__button" aria-label="Select a Language">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2ZM4 12a7.6 7.6 0 0 1 .21-1.78L9 15v1a2 2 0 0 0 2 2v1.93A8 8 0 0 1 4 12Zm12 4a2 2 0 0 1 1.9 1.4A8 8 0 0 0 15 4.59V5a2 2 0 0 1-2 2h-2v2a1 1 0 0 1-1 1H8v2h6a1 1 0 0 1 1 1v3Z"></path>
-        </svg>
-      </button>
-    </section>
+    <section class="deepen">
+  <div class="deepen__cards">
+    <article class="deepen__card">
+      <img src="img/deepen.webp" alt="Woman meeting with sister missionaries.">
+      <h3>Deepen your faith</h3>
+      <p>Meet with our missionaries to discuss your questions and find a Christ-centered community.</p>
+      <a href="#" class="deepen__button" aria-label="Request a visit">Request a Visit</a>
+    </article>
+  </div>
+</section>
+
+    <section class="hope">
+  <h2>Message of Hope</h2>
+  <blockquote class="hope__quote">
+    <p>
+      So many wonderful things are ahead. In coming days, we will see the <em>greatest</em> manifestations of the Savior’s power that the world has <em>ever</em> seen. Between now and the time He returns “with power and great glory,” 
+      <a href="#" aria-label="Read Joseph Smith—Matthew 1:36">(Joseph Smith—Matthew 1:36)</a>, He will bestow countless privileges, blessings, and miracles upon the faithful.
+    </p>
+  </blockquote>
+  <div class="hope__author">
+    <img src="img/nelson.webp" alt="President Russell M. Nelson">
+    <div class="hope__author-text">
+      <strong>Russell M. Nelson</strong>
+      <p>Prophet and President of The Church of Jesus Christ of Latter-day Saints</p>
+    </div>
+  </div>
+</section>
+
+    <section class="faith">
+  <h2>A Community of Faith Focused on Jesus Christ</h2>
+  <div class="faith__cards">
+    <article class="faith__card">
+      <img src="img/what_to_expect.webp" alt="Children talking at church">
+      <h3>What to Expect at Church</h3>
+      <p>Church is a refuge from the chaos of everyday life—a place where you can worship God with other believers trying to be more like Jesus. We would love to have you visit!</p>
+      <a href="#" class="faith__button" aria-label="Learn what to expect at church">Learn More</a>
+    </article>
+    <article class="faith__card">
+      <img src="img/our_beliefs.webp" alt="Boy studying scripture at table">
+      <h3>Our Beliefs</h3>
+      <p>All our beliefs center on God and Jesus Christ. Learn more about what we believe and how those core beliefs can inspire you to follow the Savior.</p>
+      <a href="#" class="faith__button" aria-label="Explore our beliefs">Explore</a>
+    </article>
+    <article class="faith__card">
+      <img src="img/get_to_know.webp" alt="Family standing outside in nature">
+      <h3>Get to Know Us</h3>
+      <p>You’ll find members of The Church of Jesus Christ of Latter-day Saints all over the world. We’re your friends and neighbors working together to try to make the world a better place.</p>
+      <a href="#" class="faith__button" aria-label="Get to know us">Who We Are</a>
+    </article>
+  </div>
+</section>
+
+    <section class="news">
+  <div class="news__cards">
+    <article class="news__card">
+      <img src="img/news_church.webp" alt="Happy couple holding hands with family around.">
+      <h3>Get the latest news from the Church</h3>
+      <p>Learn about Church projects, humanitarian efforts, and uplifting events around the world.</p>
+      <a href="#" class="news__button" aria-label="Visit newsroom">Visit Newsroom</a>
+    </article>
+  </div>
+</section>
+
+
+    <section class="find">
+  <div class="find__options">
+    <div class="find__option">
+      <img src="img/icon_church.svg" alt="Icon of church building">
+      <h3>Find a Church Near You</h3>
+    </div>
+    <div class="find__option">
+      <img src="img/icon_missionary.svg" alt="Icon of chat bubbles">
+      <h3>Meet with Missionaries</h3>
+    </div>
+    <div class="find__option">
+      <img src="img/icon_book.svg" alt="Icon of a book">
+      <h3>Study the Book of Mormon</h3>
+    </div>
+  </div>
+</section>
   </main>
 </body>
 
