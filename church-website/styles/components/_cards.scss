@@ -1,0 +1,80 @@
+@media (min-width: $desktop-breakpoint) {
+    // Believe Section
+    .believe {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 4rem 2rem;
+      text-align: center;
+  
+      &__card img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    // Faith Section
+    .faith {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+      padding: 4rem 2rem;
+  
+      &__image {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1rem;
+      }
+    }
+  }
+  .card {
+    background-color: $text-light;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    .card-content {
+      padding: 1rem;
+  
+      h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .card {
+      .card-content {
+        h3 {
+          font-size: 1.25rem;
+        }
+  
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+  
