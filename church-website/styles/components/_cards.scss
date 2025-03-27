@@ -1,3 +1,5 @@
+@use '../base/variables' as *;
+
 @media (min-width: $desktop-breakpoint) {
     // Believe Section
     .believe {

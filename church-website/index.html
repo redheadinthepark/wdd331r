@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Church of Jesus Christ</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
   <!--temporary style for the assignment-->
   <style>
     .site-header__brand svg, .believe__heading svg, .hero__banner-image img {
@@ -38,18 +38,24 @@
             </svg>
       </div>    
       
-    <div class="site-header__actions">
-      <span class="site-header__search-icon" aria-label="Search" role="img">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M10 2a8 8 0 105.29 14.29l5.21 5.2 1.5-1.5-5.2-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
-        </svg>
-      </span>
+      <div class="site-header__actions">
+        <button class="site-header__search" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M21 20l-5.597-5.597a7.5 7.5 0 1 0-1.414 1.414L20 21l1-1zM10 16a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"/>
+          </svg>
+        </button>
+      
 
-      <span class="site-header__sign-in" aria-label="Sign In" role="img">
+        <button class="site-header__grid" aria-label="Apps">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/>
+          </svg>
+        </button>
+
+            <span class="site-header__profile" aria-label="Profile" role="img">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 2a5 5 0 100 10 5 5 0 000-10zm0 12c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/>
         </svg>
-        <span>Sign In</span>
       </span>
     </div>
   </header>

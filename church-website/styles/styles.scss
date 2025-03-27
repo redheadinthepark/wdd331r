@@ -1,9 +1,7 @@
 @use 'base/reset';
-@use 'base/typography';
 @use 'base/variables';
-
+@use 'base/typography';
 @use 'layout/layout';
 @use 'layout/header';
-
 @use 'components/cards';
 @use 'components/list-links';
