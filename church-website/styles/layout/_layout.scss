@@ -629,7 +629,7 @@ main {
     }
 
     // Mobile horizontal line
-    @media (max-width: $desktop-breakpoint - 1) {
+    @media (max-width: $desktop-breakpoint) {
       &:not(:last-child) {
         border-bottom: 1px solid $primary-color;
         padding-bottom: $spacing-lg;
