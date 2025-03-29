@@ -6,20 +6,21 @@
   justify-content: space-between;
   background-color: $text-light;
   padding: 0;
-  height: 75px; 
+  height: 75px;
+  width: 100%;
 
   &__menu-button {
     background-color: $primary-color;
     color: $text-light;
     border: none;
-    padding: 1.5rem; 
+    padding: 1.25rem; // slightly reduced for tighter layout
     margin: 0;
     border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 80px; 
+    width: 72px; // slightly smaller than 80px
     flex-shrink: 0;
 
     svg {
@@ -33,6 +34,15 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    svg {
+      max-width: 128px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 
   &__actions {
@@ -71,7 +81,47 @@
     border-radius: 4px;
 
     svg {
+      width: 20px;
+      height: 20px;
       margin-right: 0.5rem;
+    }
+  }
+}
+
+// Mobile tweaks
+@media (max-width: $tablet-breakpoint) {
+  .site-header {
+    height: auto;
+    padding: 0 0.5rem;
+
+    &__menu-button {
+      width: 64px;
+      padding: 1rem;
+    }
+
+    &__brand {
+      svg {
+        max-width: 96px;
+      }
+    }
+
+    &__actions {
+      gap: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    &__search,
+    &__grid,
+    &__profile {
+      padding: 0.375rem;
+    }
+
+    &__signin {
+      padding: 0.375rem 0.75rem;
+
+      svg {
+        margin-right: 0.25rem;
+      }
     }
   }
 }

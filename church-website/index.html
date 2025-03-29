@@ -6,13 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Church of Jesus Christ</title>
   <link rel="stylesheet" href="styles/styles.css" />
-  <!--temporary style for the assignment-->
-  <style>
-    .site-header__brand svg, .believe__heading svg, .hero__banner-image img {
-      width: 128px;
-      height: auto;
-    }
-  </style>
 </head>
 
 <body>
@@ -83,29 +76,37 @@
   </div>
 </section>
 
-    <section class="believe">
+<section class="believe">
   <div class="believe__heading">
     <h2>What We Believe</h2>
     <p>Learn about The Church of Jesus Christ of Latter-day Saints</p>
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation" class="believe__arrow" aria-hidden="true">
-        <path fill="currentColor" d="M16.223 12.538a.75.75 0 0 0 0-1.076l-5.4-5.25a.75.75 0 1 0-1.046 1.076l4.858 4.702-4.858 4.722a.75.75 0 0 0 1.046 1.076l5.4-5.25z"></path>
-      </svg>  </div>
-  <div class="believe__cards">
-    <article class="believe__card">
-      <img src="img/learn.webp" alt="Painting of Jesus Christ">
+      <path fill="currentColor" d="M16.223 12.538a.75.75 0 0 0 0-1.076l-5.4-5.25a.75.75 0 1 0-1.046 1.076l4.858 4.702-4.858 4.722a.75.75 0 0 0 1.046 1.076l5.4-5.25z"/>
+    </svg>
+  </div>
+
+  <div class="card">
+    <img src="img/learn.webp" alt="Painting of Jesus Christ">
+    <div class="card-content">
       <h3>Learn About Jesus Christ</h3>
       <p>Get to know and follow Him</p>
-    </article>
-    <article class="believe__card">
-      <img src="img/find.webp" alt="Mother and child hugging and smiling">
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="img/find.webp" alt="Mother and child hugging and smiling">
+    <div class="card-content">
       <h3>Find Meaning in Your Life</h3>
       <p>Seek God's perspective</p>
-    </article>
-    <article class="believe__card">
-      <img src="img/navigate.webp" alt="Woman sitting on steps praying">
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="img/navigate.webp" alt="Woman sitting on steps praying">
+    <div class="card-content">
       <h3>Navigate Life's Challenges</h3>
       <p>Discover strength, direction, and peace</p>
-    </article>
+    </div>
   </div>
 </section>
 
@@ -116,7 +117,7 @@
         <p><strong>Find a church near you.</strong></p>
         <div class="section-card__form">
           <input type="text" placeholder="Enter full address" aria-label="Enter full address">
-          <button aria-label="Find a church">Find</button>
+          <button class="hero__button" aria-label="Find a church">Find</button>
         </div>
       </div>
       <div class="section-card__image">
@@ -146,14 +147,14 @@
   <a href="#" class="questions__button" aria-label="View more questions">View More</a>
 </section>
 
-    <section class="deepen">
-  <div class="deepen__cards">
-    <article class="deepen__card">
-      <img src="img/deepen.webp" alt="Woman meeting with sister missionaries.">
-      <h3>Deepen your faith</h3>
-      <p>Meet with our missionaries to discuss your questions and find a Christ-centered community.</p>
-      <a href="#" class="deepen__button" aria-label="Request a visit">Request a Visit</a>
-    </article>
+<section class="deepen">
+  <div class="section-card__text">
+    <h2>Deepen your faith. Meet with our missionaries.</h2>
+    <p>We will answer questions, discuss what's important to you, and connect you to a Christ-centered community.</p>
+    <a href="#" class="hero__button" aria-label="Request a visit">Request a Visit</a>
+  </div>
+  <div class="section-card__image">
+    <img src="img/deepen.webp" alt="Woman meeting with sister missionaries.">
   </div>
 </section>
 
@@ -169,43 +170,47 @@
     <img src="img/nelson.webp" alt="President Russell M. Nelson">
     <div class="hope__author-text">
       <strong>Russell M. Nelson</strong>
-      <p>Prophet and President of The Church of Jesus Christ of Latter-day Saints</p>
+      <p>Prophet and President of The Church of<br class="desktop-break">Jesus Christ of Latter-day Saints</p>
     </div>
   </div>
 </section>
 
-    <section class="faith">
+<section class="faith">
   <h2>A Community of Faith Focused on Jesus Christ</h2>
-  <div class="faith__cards">
-    <article class="faith__card">
-      <img src="img/what_to_expect.webp" alt="Children talking at church">
+
+  <div class="card">
+    <img src="img/what_to_expect.webp" alt="Children talking at church">
+    <div class="card-content">
       <h3>What to Expect at Church</h3>
       <p>Church is a refuge from the chaos of everyday life—a place where you can worship God with other believers trying to be more like Jesus. We would love to have you visit!</p>
-      <a href="#" class="faith__button" aria-label="Learn what to expect at church">Learn More</a>
-    </article>
-    <article class="faith__card">
-      <img src="img/our_beliefs.webp" alt="Boy studying scripture at table">
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="img/our_beliefs.webp" alt="Boy studying scripture at table">
+    <div class="card-content">
       <h3>Our Beliefs</h3>
       <p>All our beliefs center on God and Jesus Christ. Learn more about what we believe and how those core beliefs can inspire you to follow the Savior.</p>
-      <a href="#" class="faith__button" aria-label="Explore our beliefs">Explore</a>
-    </article>
-    <article class="faith__card">
-      <img src="img/get_to_know.webp" alt="Family standing outside in nature">
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="img/get_to_know.webp" alt="Family standing outside in nature">
+    <div class="card-content">
       <h3>Get to Know Us</h3>
       <p>You'll find members of The Church of Jesus Christ of Latter-day Saints all over the world. We're your friends and neighbors working together to try to make the world a better place.</p>
-      <a href="#" class="faith__button" aria-label="Get to know us">Who We Are</a>
-    </article>
+    </div>
   </div>
 </section>
 
-    <section class="news">
-  <div class="news__cards">
-    <article class="news__card">
-      <img src="img/news_church.webp" alt="Happy couple holding hands with family around.">
-      <h3>Get the latest news from the Church</h3>
-      <p>Learn about Church projects, humanitarian efforts, and uplifting events around the world.</p>
-      <a href="#" class="news__button" aria-label="Visit newsroom">Visit Newsroom</a>
-    </article>
+<section class="news">
+  <div class="section-card__image">
+    <img src="img/news_church.webp" alt="Happy couple holding hands with family around.">
+  </div>
+  <div class="section-card__text">
+    <h2>Get the latest news from the Church</h2>
+    <p>Good things are happening around the world. Get current updates on Church projects, events, disaster relief efforts, and more.</p>
+    <a href="#" class="hero__button" aria-label="Visit newsroom">Visit Newsroom</a>
   </div>
 </section>
 

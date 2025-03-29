@@ -1,136 +1,659 @@
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-
-  &:focus {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    width: auto;
-    height: auto;
-    background: #fff;
-    color: #000;
-    padding: 0.5rem 1rem;
-    z-index: 1000;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
-  }
-}
+@use '../base/variables' as *;
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: $spacing-lg;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $spacing-md;
 }
 
-section {
-  padding: 1.5rem 1rem;
-}
-
-@media (min-width: 768px) {
-  main {
-    gap: 3rem;
-  }
-
-  section {
-    padding: 2rem 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  section {
-    padding: 3rem 4rem;
-  }
-}
-
-// Hero Section
+/* Hero Section */
 .hero {
-  position: relative;
-  min-height: 600px;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 4rem;
+  flex-direction: column;
+  gap: $spacing-md;
 
-  &__content {
-    max-width: 600px;
-    color: #fff;
+  &__background {
+    position: relative;
+
+    img {
+      position: relative;
+      width: 100vw;
+      height: auto;
+      display: block;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      max-width: none;
+    }
   }
 
-  &__cta {
-    margin-top: 1.5rem;
-  }
-}
-
-// Welcome Section
-.welcome {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-
-  &__form {
+  &__overlay {
+    background-color: $background-alt;
+    text-align: left;
+    padding: $spacing-md;
+    position: relative;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 4px;
+      background-color: $primary-color;
+      margin-bottom: $spacing-sm;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: $spacing-sm;
+      color: $text-dark;
+    }
+
+    p {
+      margin-bottom: $spacing-md;
+      color: $text-dark;
+    }
+
+    .hero__button {
+      display: inline-block;
+      background-color: $primary-color;
+      color: $text-light;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
   }
 
-  &__image img {
-    width: 100%;
-    border-radius: 8px;
+  &__banner {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: $primary-color;
+    color: $text-light;
+    text-align: left;
+    padding: $spacing-md;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    &-image {
+      display: none;
+    }
+
+    &-content {
+      p {
+        margin-bottom: 0.5rem;
+      }
+
+      strong {
+        display: block;
+        font-size: 1.2rem;
+      }
+    }
+
+    .hero__button--small {
+      background-color: #fff;
+      color: $primary-color;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: $spacing-sm;
+      display: inline-block;
+      width: fit-content;
+      align-self: flex-start;
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    &__background {
+      display: flex;
+      flex-direction: column-reverse;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__overlay {
+      order: -1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: $spacing-lg;
+
+      .hero__button {
+        background-color: #fff;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+      }
+    }
+
+    &__banner {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+
+      &-image {
+        display: block;
+        flex: 1;
+        max-width: 300px;
+
+        img {
+          width: 100%;
+          display: block;
+          height: auto;
+        }
+      }
+
+      &-content {
+        flex: 2;
+        padding-left: $spacing-md;
+
+        p,
+        strong {
+          color: $text-light;
+        }
+      }
+
+      .hero__button--small {
+        background-color: #fff;
+        color: $primary-color;
+        margin-top: $spacing-md;
+      }
+    }
   }
 }
+//believe section
 
-// Deepen Section
-.deepen {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-
-  &__text {
-    max-width: 600px;
-  }
-
-  &__image img {
-    width: 100%;
-    border-radius: 8px;
-  }
-}
-
-// News Section
-.news {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 4rem 2rem;
-
-  &__image img {
-    width: 100%;
-    height: auto;
-  }
-
-  &__content {
-    max-width: 600px;
-  }
-}
-
-// Find Section
-.find {
+.believe {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 4rem 2rem;
-  gap: 2rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: $spacing-md;
 
-  &__item {
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    text-align: left;
+
+    h2 {
+      color: $text-dark;
+      font-size: 1.5rem;
+      font-weight: 100;
+      }
+
+    p {
+      color: $text-dark;
+      font-weight: 100;
+      }
+
+    .believe__arrow {
+      width: 36px;
+      height: 36px;
+      padding: 6px;
+      border: 2px solid $primary-color;
+      border-radius: 4px;
+      background-color: $primary-color;
+      fill: $text-light;
+
+      path {
+        fill: $text-light;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-md;
+
+    &__heading {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+//Welcome section
+
+.welcome {
+  display: flex;
+  flex-direction: column-reverse; 
+  gap: $spacing-md;
+
+  .section-card__image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .section-card__text {
+    background-color: $primary-color;
+    color: $text-light;
+    padding: $spacing-md;
+    text-align: left;
+
+    h2, p {
+      font-weight: 300;
+      margin-bottom: $spacing-sm;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .section-card__form {
+      margin-top: $spacing-sm;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+
+      input {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #fff;
+        color: $primary-color;
+        font-weight: bold;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        width: fit-content;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    flex-direction: row; 
+
+    .section-card__text,
+    .section-card__image {
+      flex: 1;
+    }
+
+    .section-card__form {
+      flex-direction: row;
+      align-items: left;
+
+      input {
+        flex: 1;
+        margin-right: $spacing-sm;
+      }
+
+      button {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+//Questions section
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: $text-dark;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ccc;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $spacing-sm 0;
+      padding-left: $spacing-sm;
+      border-bottom: 1px solid #ccc;
+      font-size: 1.125rem;
+      font-weight: lighter;
+      color: $text-dark;
+
+      span {
+        flex: 1;
+      }
+
+      &::after {
+        content: "⌄"; 
+        font-size: 1.2rem;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__button {
+    align-self: flex-start;
+    background-color: $primary-color;
+    color: $text-light;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: $spacing-md;
+  }
+}
+
+//Deepen section
+
+.deepen {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  .section-card__image {
+    order: -1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .section-card__text {
+    background-color: $primary-color;
+    color: $text-light;
+    padding: $spacing-md;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+      font-weight: 300;
+      margin-bottom: $spacing-sm;
+    }
+
+    .hero__button {
+      background-color: #fff;
+      color: $primary-color;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    flex-direction: row; 
+    align-items: stretch;
+
+    .section-card__image {
+      order: 1;
+      flex: 1;
+    }
+
+    .section-card__text {
+      flex: 1;
+      padding: $spacing-lg;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+//Hope section
+.hope {
+  text-align: center;
+  padding: $spacing-lg $spacing-md;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: $spacing-md;
+    color: $text-dark;
+  }
+
+  &__quote {
+    max-width: 60ch;
+    margin: 0 auto $spacing-lg auto;
+
+    p {
+      font-size: 1.125rem;
+      font-weight: lighter;
+      color: $text-dark;
+      line-height: 1.6;
+
+      em {
+        font-style: italic;
+      }
+
+      a {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &-text {
+      text-align: left;
+
+      strong {
+        display: block;
+        font-size: 1.125rem;
+        color: $text-dark;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: $text-dark;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    &__quote {
+      max-width: 80ch;
+    }
+
+    &__author {
+      justify-content: center;
+    }
+  }
+}
+
+//Faith section
+
+.faith {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+
+  h2 {
     text-align: center;
-    max-width: 180px;
+    max-width: 60ch;
+  }
+
+  .card {
+    width: 100%; 
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .faith {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-md;
+
+    h2 {
+      grid-column: 1 / -1;
+      text-align: center; 
+      justify-self: center;
+
+    }
+  }
+}
+
+//News section
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  .section-card__image {
+    order: -1; // Image first in mobile
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .section-card__text {
+    background-color: $primary-color;
+    color: $text-light;
+    padding: $spacing-md;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+      font-weight: 300;
+      margin-bottom: $spacing-sm;
+    }
+
+    .hero__button {
+      display: inline-block;
+      background-color: $primary-color;
+      color: $text-light;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;     
+    }
+
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    flex-direction: row; 
+
+    .section-card__image {
+      order: -1; 
+      flex: 1;
+    }
+
+    .section-card__text {
+      flex: 1;
+      padding: $spacing-lg;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+// Find section
+
+.find {
+  padding: $spacing-lg 0;
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: $spacing-sm;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $text-dark;
+    }
+
+    // Mobile horizontal line
+    @media (max-width: $desktop-breakpoint - 1) {
+      &:not(:last-child) {
+        border-bottom: 1px solid $primary-color;
+        padding-bottom: $spacing-lg;
+        margin-bottom: $spacing-lg;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .find {
+    &__options {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    &__option {
+      // Desktop vertical lines only
+      &:not(:last-child) {
+        border-right: 1px solid $primary-color;
+        padding-right: $spacing-xl;
+        margin-right: $spacing-xl;
+      }
+    }
   }
 }
