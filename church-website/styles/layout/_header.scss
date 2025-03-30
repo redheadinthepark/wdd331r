@@ -1,5 +1,30 @@
 @use '../base/variables' as *;
 
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background-color: $primary-color;
+    color: $text-light;
+    font-weight: bold;
+    z-index: 1000;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+}
+
+
 .site-header {
   display: flex;
   align-items: center;
@@ -13,14 +38,14 @@
     background-color: $primary-color;
     color: $text-light;
     border: none;
-    padding: 1.25rem; // slightly reduced for tighter layout
+    padding: 1.25rem; 
     margin: 0;
     border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 72px; // slightly smaller than 80px
+    width: 72px; 
     flex-shrink: 0;
 
     svg {
@@ -88,7 +113,7 @@
   }
 }
 
-// Mobile tweaks
+// Mobile 
 @media (max-width: $tablet-breakpoint) {
   .site-header {
     height: auto;

@@ -16,11 +16,13 @@ main {
   gap: $spacing-md;
 
   &__background {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     position: relative;
 
     img {
       position: relative;
-      width: 100vw;
+      width: 100%;
       height: auto;
       display: block;
       margin-left: 50%;
@@ -171,6 +173,7 @@ main {
     }
   }
 }
+
 //believe section
 
 .believe {
@@ -311,6 +314,7 @@ main {
 }
 
 //Questions section
+
 .questions {
   display: flex;
   flex-direction: column;
@@ -429,6 +433,7 @@ main {
 }
 
 //Hope section
+
 .hope {
   text-align: center;
   padding: $spacing-lg $spacing-md;
@@ -543,7 +548,7 @@ main {
   gap: $spacing-md;
 
   .section-card__image {
-    order: -1; // Image first in mobile
+    order: -1; 
 
     img {
       width: 100%;
@@ -628,7 +633,6 @@ main {
       color: $text-dark;
     }
 
-    // Mobile horizontal line
     @media (max-width: $desktop-breakpoint) {
       &:not(:last-child) {
         border-bottom: 1px solid $primary-color;
@@ -648,7 +652,6 @@ main {
     }
 
     &__option {
-      // Desktop vertical lines only
       &:not(:last-child) {
         border-right: 1px solid $primary-color;
         padding-right: $spacing-xl;
